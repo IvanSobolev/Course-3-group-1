@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesLibrary", "ShapesLibrary\ShapesLibrary.csproj", "{8448A64D-38DF-4AF4-91CB-A3C4972979E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppPracticeC", "AppPracticeC\AppPracticeC.csproj", "{D7DD5B94-631E-475F-AAA3-AC77AA0E0CCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8448A64D-38DF-4AF4-91CB-A3C4972979E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8448A64D-38DF-4AF4-91CB-A3C4972979E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8448A64D-38DF-4AF4-91CB-A3C4972979E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8448A64D-38DF-4AF4-91CB-A3C4972979E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7DD5B94-631E-475F-AAA3-AC77AA0E0CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7DD5B94-631E-475F-AAA3-AC77AA0E0CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7DD5B94-631E-475F-AAA3-AC77AA0E0CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7DD5B94-631E-475F-AAA3-AC77AA0E0CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

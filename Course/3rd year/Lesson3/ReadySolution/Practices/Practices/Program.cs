@@ -7,7 +7,7 @@ class Program
     
     static void Main(string[] args)
     {
-        var records = CsvDataWorker.ReadData(FILEPATH);
+        var records = SaleRecord.ReadData(FILEPATH);
 
         SaleRecordManager manager;
         if (records.Any())
