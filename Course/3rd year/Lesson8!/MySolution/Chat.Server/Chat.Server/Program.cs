@@ -26,6 +26,11 @@ public class Program
         app.UseRouting();
         app.UseWebSockets();
 
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
+
         app.UseHttpsRedirection();
 
         app.Run();
