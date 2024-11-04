@@ -10,7 +10,7 @@ builder.Services.AddDbContext<DataContext>(options => options.UseSqlite(builder.
 
 var app = builder.Build();
 
-using var serviceScope = app.Services.CreateScope();
+using var servicecope = app.Services.CreateScope();
 
 try
 {
