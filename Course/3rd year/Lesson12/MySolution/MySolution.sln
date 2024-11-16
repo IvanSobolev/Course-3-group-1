@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySolution", "MySolution\MySolution.csproj", "{A84ABB2B-F58E-4F45-A448-E0BF7CDE3E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineAPI", "LineAPI\LineAPI.csproj", "{C3693CFF-96DE-45A7-8782-6860A54F8005}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A84ABB2B-F58E-4F45-A448-E0BF7CDE3E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84ABB2B-F58E-4F45-A448-E0BF7CDE3E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84ABB2B-F58E-4F45-A448-E0BF7CDE3E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84ABB2B-F58E-4F45-A448-E0BF7CDE3E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3693CFF-96DE-45A7-8782-6860A54F8005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3693CFF-96DE-45A7-8782-6860A54F8005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3693CFF-96DE-45A7-8782-6860A54F8005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3693CFF-96DE-45A7-8782-6860A54F8005}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
