@@ -119,7 +119,8 @@ WHERE price BETWEEN @MinPrice AND @MaxPrice;
 SELECT rm.id, rm.address, COUNT(rv.id) AS review_count, AVG(rv.rating) AS average_rating
 FROM Rooms rm
 LEFT JOIN Reservations res ON rm.id = res.room_id
-LEFT JOIN Reviews rv ON res.id = rv.reservation_id
+LEFT JOIN Reviews rv ON 
+res.id = rv.reservation_id
 GROUP BY rm.id, rm.address;
 
 -- Показать пользователей, которые не подтвердили свой email
