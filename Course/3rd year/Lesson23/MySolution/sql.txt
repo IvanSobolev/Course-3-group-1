@@ -1,0 +1,73 @@
+﻿-- a.1
+
+Select *
+FROM employees
+WHERE salary > 70000;
+
+-- a.2
+
+Select *
+FROM employees
+WHERE position = 'Разработчик';
+
+-- a.3
+
+Select *
+FROM employees emp
+JOIN departments dep on emp.department_id = dep.id
+WHERE dep.department_name = 'Разработка'
+Order BY emp.name;
+
+-- b.1
+
+Select *
+FROM employees
+WHERE salary > 72000
+Order BY name DESC;
+
+-- b.2
+
+Select *
+FROM employees
+WHERE salary BETWEEN 60000 AND 80000
+Order BY name DESC;
+
+-- b.3
+
+Select *
+FROM employees emp
+JOIN departments dep on emp.department_id = dep.id
+WHERE dep.department_name = 'Разработка'
+Order BY emp.salary DESC;
+
+-- c.1
+
+Select emp.position, COUNT(*) as employee_count
+FROM employees emp
+JOIN departments dep on emp.department_id = dep.id
+WHERE dep.department_name = 'Разработка'
+GROUP BY emp.position;
+
+-- c.2
+
+Select emp.position, SUM(emp.salary) as total
+FROM employees emp
+JOIN departments dep on emp.department_id = dep.id
+WHERE dep.department_name = 'Разработка'
+GROUP BY emp.position;
+
+-- c.3
+
+Select emp.position, MAX(emp.salary) as max, MIN(emp.salary) as min
+FROM employees emp
+JOIN departments dep on emp.department_id = dep.id
+WHERE dep.department_name = 'Разработка'
+GROUP BY emp.position;
+
+--c.4
+
+Select *
+FROM employees emp
+JOIN departments dep on emp.department_id = dep.id
+WHERE dep.department_name = 'Разработка' OR dep.department_name = 'Маркетинг'
+Order BY emp.salary, emp.position;
