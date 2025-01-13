@@ -70,4 +70,4 @@ Select *
 FROM employees emp
 JOIN departments dep on emp.department_id = dep.id
 WHERE dep.department_name = 'Разработка' OR dep.department_name = 'Маркетинг'
-Order BY emp.salary, emp.position;
+Order BY emp.salary DESC, emp.position ASC;
