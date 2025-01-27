@@ -1,0 +1,22 @@
+﻿EXPLAIN QUERY PLAN SELECT * FROM Users WHERE UserName = 'John Doe';
+
+CREATE INDEX idx_username ON Users(UserName);
+
+EXPLAIN QUERY PLAN SELECT * FROM Orders WHERE OrderDate BETWEEN '2023-08-01' AND '2023-08-31';
+
+CREATE INDEX idx_orderdate ON Orders(OrderDate);
+
+EXPLAIN QUERY PLAN SELECT Users.UserName, Products.ProductName
+FROM Orders
+JOIN Users ON Orders.UserID = Users.UserID
+JOIN Products ON Orders.ProductID = Products.ProductID;
+
+CREATE INDEX idx_orders_userid_productid ON Orders(UserID, ProductID);
+
+EXPLAIN QUERY PLAN SELECT * FROM Products WHERE Category = 'Electronics';
+
+CREATE INDEX idx_product_category ON Products(Category);
+
+EXPLAIN QUERY PLAN SELECT Category, COUNT(*) FROM Products GROUP BY Category;
+
+CREATE INDEX idx_category ON Products(Category);
