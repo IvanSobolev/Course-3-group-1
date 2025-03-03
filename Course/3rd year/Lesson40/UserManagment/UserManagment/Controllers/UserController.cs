@@ -1,34 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UserManagment.Managers;
 using UserManagment.Models;
+using UserManagment.Services.Interface;
 
 namespace UserManagment.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class UserController : ControllerBase
+public class UserController(IUserService userService) : ControllerBase
 {
-    private readonly UserManager userManager = new UserManager();
+    private readonly IUserService _userService = userService;
 
     [HttpPost("CreateUser")]
-    public IActionResult CreateUser(string username, string email)
+    public async Task<IActionResult> CreateUserAsync(string username, string email)
     {
-        var user = new User { Username = username, Email = email };
-        userManager.AddUser(user);
-        return Content($"User {username} created.");
+        await userService.AddUserAsync(username, email);
+        return Ok($"User {username} created.");
     }
 
     [HttpDelete("RemoveUser")]
-    public IActionResult RemoveUser(int userId)
+    public async Task<IActionResult> RemoveUserAsync(int userId)
     {
-        userManager.DeleteUser(userId);
+        await _userService.DeleteUserAsync(userId);
         return Content($"User with ID {userId} removed.");
     }
 
     [HttpGet("ShowUser")]
-    public IActionResult ShowUser(int userId)
+    public async Task<IActionResult> ShowUser(int userId)
     {
-        var user = userManager.GetUser(userId);
+        var user = await _userService.GetUserAsync(userId);
         if (user != null)
         {
             return Content($"User: {user.Username}, Email: {user.Email}");
@@ -40,9 +39,9 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("ListUsers")]
-    public IActionResult ListUsers()
+    public async Task<IActionResult> ListUsersAsync()
     {
-        var users = userManager.GetAllUsers();
+        var users = await _userService.GetAllUsersAsync();
         var userList = string.Join("<br/>", users.Select(u => $"User: {u.Username}, Email: {u.Email}"));
         return Content(userList);
     }
